@@ -95,6 +95,7 @@ md-dialog.dtp {
 .dtp div.dtp-picker {
     padding: 10px;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .dtp div.dtp-picker-month, .dtp div.dtp-actual-time {

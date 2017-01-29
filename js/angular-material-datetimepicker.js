@@ -61,9 +61,11 @@
     + '        </div>'
     + '    </md-dialog-content>'
     + '    <md-dialog-actions class="dtp-buttons">'
-    + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.today()"> {{picker.params.todayText}}</md-button>'
-    + '            <md-button class="dtp-btn-cancel md-button" ng-click="picker.cancel()"> {{picker.params.cancelText}}</md-button>'
-    + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.ok()"> {{picker.params.okText}}</md-button>'
+    + '            <md-button ng-show="!picker.timeMode" class="dtp-btn-ok md-button" ng-click="picker.today()"> {{picker.params.todayText}}</md-button>'
+    + '            <md-button class="dtp-btn-cancel md-button" ng-click="picker.cancel()" ng-if="picker.currentView !== picker.VIEWS.MINUTE"> {{picker.params.cancelText}}</md-button>'
+    + '            <md-button class="dtp-btn-cancel md-button" ng-click="picker.cancel()" ng-if="picker.currentView === picker.VIEWS.MINUTE"> SET HOUR </md-button>'
+    + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.ok()" ng-if="picker.currentView !== picker.VIEWS.HOUR"> {{picker.params.okText}}</md-button>'
+    + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.ok()" ng-if="picker.currentView === picker.VIEWS.HOUR"> SET MINUTE </md-button>'
     + '      </md-dialog-actions>'
     + '</md-dialog>';
 
