@@ -66,6 +66,7 @@
     + '            <md-button class="dtp-btn-cancel md-button" ng-click="picker.cancel()" ng-if="picker.currentView === picker.VIEWS.MINUTE"> SET HOUR </md-button>'
     + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.ok()" ng-if="picker.currentView !== picker.VIEWS.HOUR"> {{picker.params.okText}}</md-button>'
     + '            <md-button class="dtp-btn-ok md-button" ng-click="picker.ok()" ng-if="picker.currentView === picker.VIEWS.HOUR"> SET MINUTE </md-button>'
+    + '            <md-button id="placeHolderToPreventAutoClickOnIOS" style="opacity: 0" class="dtp-btn-ok md-button" ng-if="picker.currentView === picker.VIEWS.MINUTE"></md-button>'
     + '      </md-dialog-actions>'
     + '</md-dialog>';
 
